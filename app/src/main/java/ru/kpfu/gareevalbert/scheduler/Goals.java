@@ -2,6 +2,7 @@ package ru.kpfu.gareevalbert.scheduler;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,10 +51,15 @@ public class Goals extends AppCompatActivity {
     }
 
 
-    private String[] getDataSet(){
+    private String[] getDataSet() {
+        SQLiteDatabase database = SQLiteDatabase.openDatabase(db_helper_goals.DATABASE_NAME, null, SQLiteDatabase.OPEN_READWRITE);
+        Cursor cursor = database.query(db_helper_goals.TABLE_NAME,null, null,null,null,null,null);
+
         String[] mDataSet = new String[3];
-        for (int i = 0; i < 3; i++) {
-            mDataSet[i] = "item" + i;
+
+       for (int i = 0; i < cursor.getCount(); i++) {
+            mDataSet[i] = cursor.getColumnName(i);
+            cursor.isLast();
         }
         return mDataSet;
     }
