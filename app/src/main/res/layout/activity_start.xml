@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.kpfu.gareevalbert.scheduler.startActivity">
+    tools:context="ru.kpfu.gareevalbert.scheduler.startActivity"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="334dp"
-        android:layout_height="117dp"
+        android:layout_width="368dp"
+        android:layout_height="73dp"
+        android:layout_weight="0.90"
         android:text="Welcome!"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="162dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+</LinearLayout>
