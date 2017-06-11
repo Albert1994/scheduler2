@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.kpfu.gareevalbert.scheduler.goal.Create_Goal"
+    tools:context="ru.kpfu.gareevalbert.scheduler.notes.Create_Note"
     android:orientation="vertical"
     android:weightSum="1">
 
-
     <EditText
-        android:id="@+id/title_goal"
+        android:id="@+id/title_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -18,7 +17,7 @@
         android:text="Name" />
 
     <EditText
-        android:id="@+id/body_goal"
+        android:id="@+id/body_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -26,10 +25,11 @@
         android:layout_weight="0.17" />
 
     <Button
-        android:id="@+id/create_goal"
+        android:id="@+id/create_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button"
         tools:layout_editor_absoluteY="257dp"
         tools:layout_editor_absoluteX="167dp" />
+
 </LinearLayout>

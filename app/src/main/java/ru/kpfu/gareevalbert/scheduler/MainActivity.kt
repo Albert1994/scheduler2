@@ -7,6 +7,9 @@ import android.view.View
 import android.widget.Button
 import android.view.View.OnClickListener
 import android.widget.Toast
+import ru.kpfu.gareevalbert.scheduler.ei.Expenses_incomes
+import ru.kpfu.gareevalbert.scheduler.goal.Goals
+import ru.kpfu.gareevalbert.scheduler.notes.Notes
 
 class MainActivity : AppCompatActivity() {
 

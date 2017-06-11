@@ -1,20 +1,20 @@
-package ru.kpfu.gareevalbert.scheduler;
+package ru.kpfu.gareevalbert.scheduler.goal;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.LinearLayoutManager;
 
-import java.nio.channels.GatheringByteChannel;
 import java.util.ArrayList;
+
+import ru.kpfu.gareevalbert.scheduler.R;
+import ru.kpfu.gareevalbert.scheduler.db_Helper_goals;
 
 public class Goals extends AppCompatActivity {
 
@@ -22,7 +22,6 @@ public class Goals extends AppCompatActivity {
     private RecyclerView.Adapter mRecyclerAdapter;
     private RecyclerView.LayoutManager mlayoutManager;
     db_Helper_goals db_helper_goals;
-    SQLiteDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +29,6 @@ public class Goals extends AppCompatActivity {
 
         db_helper_goals = new db_Helper_goals(this);
         final ArrayList<Goal> myDataset = getDataSet();
-
-
 
         mRecyclerView = (RecyclerView) findViewById(R.id.goals_recycler);
         mRecyclerView.setHasFixedSize(true);
@@ -50,21 +47,22 @@ public class Goals extends AppCompatActivity {
             public void onClick(View v) {
                     Intent intent = new Intent(Goals.this, Create_Goal.class);
                     startActivity(intent);
+
             }
         });
-    }
-    public void deleteItem(int position){
-        database = db_helper_goals.getWritableDatabase();
-        position++;
-        database.delete(db_Helper_goals.TABEL_GOALS, db_Helper_goals.KEY_ID + "=" + position, null);
-        db_helper_goals.close();
+
     }
 
+   /* public void refresh(){
+        final ArrayList<Goal> myDataset = getDataSet();
+        mRecyclerAdapter = new Adapter_goals(myDataset);
+        mRecyclerView.setAdapter(mRecyclerAdapter);
+    }*/
+
     private ArrayList<Goal> getDataSet() {
-        database = db_helper_goals.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
+        SQLiteDatabase database = db_helper_goals.getWritableDatabase();
         Cursor cursor = database.query(db_Helper_goals.TABEL_GOALS,null,null,null,null,null,null);
-        ArrayList<Goal> mDataSet = new ArrayList<Goal>();
+        ArrayList<Goal> mDataSet = new ArrayList();
         if(cursor.moveToFirst()){
             int idIndex = cursor.getColumnIndex(db_Helper_goals.KEY_ID);
             int titleIndex = cursor.getColumnIndex(db_Helper_goals.KEY_TITLE);

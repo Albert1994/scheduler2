@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.kpfu.gareevalbert.scheduler.Goals"
+    tools:context="ru.kpfu.gareevalbert.scheduler.goal.Goals"
     android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView

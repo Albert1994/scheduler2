@@ -4,32 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.kpfu.gareevalbert.scheduler.goal.Create_Goal"
-    android:orientation="vertical"
-    android:weightSum="1">
+    tools:context="ru.kpfu.gareevalbert.scheduler.ei.Create_ei"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
     <EditText
-        android:id="@+id/title_goal"
+        android:id="@+id/title_ei"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Описание затрат"/>
 
     <EditText
-        android:id="@+id/body_goal"
+        android:id="@+id/money_ei"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:layout_weight="0.17" />
+        android:inputType="numberDecimal"
+        android:hint="Средства .р"/>
 
     <Button
-        android:id="@+id/create_goal"
+        android:id="@+id/create_ei"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteY="257dp"
-        tools:layout_editor_absoluteX="167dp" />
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+
 </LinearLayout>

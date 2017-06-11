@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Notes" />
-        <activity android:name=".Goals" />
-        <activity android:name=".Expenses_incomes" />
+        <activity android:name=".notes.Notes" />
+        <activity android:name=".goal.Goals" />
+        <activity android:name=".ei.Expenses_incomes" />
         <activity android:name=".startActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Create_Goal"></activity>
+        <activity android:name=".goal.Create_Goal" />
+        <activity android:name=".goal.Goal_one" />
+        <activity android:name=".notes.Create_Note" />
+        <activity android:name=".ei.Create_ei" />
+        <activity android:name=".goal.Change_Goal"></activity>
     </application>
 
 </manifest>

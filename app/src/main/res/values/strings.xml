@@ -3,4 +3,14 @@
     <string name="title_activity_notes">Notes</string>
     <string name="title_activity_qw">qw</string>
     <string name="title_activity_create__goal">Create_Goal</string>
+    <string-array name="category_array">
+        <item>Продукты</item>
+        <item>Развлечение</item>
+        <item>Рестораны и кафе</item>
+        <item>Одежда и аксессуары</item>
+        <item>Коммунальные платежи, связь, интернет</item>
+        <item>Прочие</item>
+        <item>Здоровье</item>
+        <item>Поездки</item>
+    </string-array>
 </resources>

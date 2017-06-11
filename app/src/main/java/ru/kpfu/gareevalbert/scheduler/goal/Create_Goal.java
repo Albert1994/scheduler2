@@ -1,4 +1,4 @@
-package ru.kpfu.gareevalbert.scheduler;
+package ru.kpfu.gareevalbert.scheduler.goal;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 import android.widget.EditText;
+
+import ru.kpfu.gareevalbert.scheduler.R;
+import ru.kpfu.gareevalbert.scheduler.db_Helper_goals;
 
 public class Create_Goal extends AppCompatActivity {
 

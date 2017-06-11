@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.kpfu.gareevalbert.scheduler.Notes">
+    tools:context="ru.kpfu.gareevalbert.scheduler.notes.Notes"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notes_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.20"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/add_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</LinearLayout>
