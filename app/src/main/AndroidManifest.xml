@@ -24,7 +24,9 @@
         <activity android:name=".goal.Goal_one" />
         <activity android:name=".notes.Create_Note" />
         <activity android:name=".ei.Create_ei" />
-        <activity android:name=".goal.Change_Goal"></activity>
+        <activity android:name=".goal.Change_Goal" />
+        <activity android:name=".notes.Notes_one" />
+        <activity android:name=".notes.Change_Notes"></activity>
     </application>
 
 </manifest>

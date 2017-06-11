@@ -51,9 +51,9 @@ public class Goal_one extends AppCompatActivity {
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Goal_one.this, Create_Goal.class);
+                Intent intent = new Intent(Goal_one.this, Change_Goal.class);
+                intent.putExtra("ID",String.valueOf(ID));
                 startActivity(intent);
-
             }
         });
         delete.setOnClickListener(new View.OnClickListener() {
